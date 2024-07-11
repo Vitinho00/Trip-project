@@ -1,0 +1,8 @@
+CREATE Table links (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    trip_id BIGINT,
+    FOREIGN KEY (trip_id) REFERENCES trips(id)
+    ON DELETE CASCADE
+);
